@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on darwin)" generated="20230710 08:10:42.316" rpa="false" schemaversion="4">
+<suite id="s1" name="TC2" source="/Users/ayushisingh/Documents/RobotFrameworkwithPython/TestCases/TC2.robot">
+<test id="s1-t1" name="Example Test" line="5">
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230710 08:10:42.764" level="INFO">{"browser": "chromium", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/Users/ayushisingh/Documents/RobotFrameworkwithPython/browser/traces/6448c0c7-a765-4e80-acef-00e695062afa"}</msg>
+<msg timestamp="20230710 08:10:43.020" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/Users/ayushisingh/Documents/RobotFrameworkwithPython/browser/traces/6448c0c7-a765-4e80-acef-00e695062afa"}</msg>
+<status status="PASS" starttime="20230710 08:10:42.763" endtime="20230710 08:10:43.020"/>
+</kw>
+<kw name="New Context" library="Browser">
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20230710 08:10:43.021" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "hideRfBrowser": false,
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": {
+    "height": 1080,
+    "width": 1920
+  },
+  "deprecated_pos_args": []
+}</msg>
+<msg timestamp="20230710 08:10:43.036" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230710 08:10:43.036" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 1080, 'width': 1920}, 'deprecated_pos_args': []}</msg>
+<status status="PASS" starttime="20230710 08:10:43.021" endtime="20230710 08:10:43.036"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://playwright.dev</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230710 08:10:44.018" level="INFO">Successfully initialized new page object and opened url: https://playwright.dev</msg>
+<status status="PASS" starttime="20230710 08:10:43.036" endtime="20230710 08:10:44.018"/>
+</kw>
+<status status="PASS" starttime="20230710 08:10:42.762" endtime="20230710 08:10:44.019"/>
+</test>
+<status status="PASS" starttime="20230710 08:10:42.317" endtime="20230710 08:10:44.102"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC2">TC2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
