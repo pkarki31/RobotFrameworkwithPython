@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.4 on darwin)" generated="20230710 08:10:42.316" rpa="false" schemaversion="4">
-<suite id="s1" name="TC2" source="/Users/ayushisingh/Documents/RobotFrameworkwithPython/TestCases/TC2.robot">
-<test id="s1-t1" name="Example Test" line="5">
-<kw name="New Browser" library="Browser">
-<arg>chromium</arg>
+<robot generator="Robot 6.1 (Python 3.11.4 on darwin)" generated="20230718 21:13:25.279" rpa="false" schemaversion="4">
+<suite id="s1" name="TC3" source="/Users/ayushisingh/Documents/RobotFrameworkwithPython/TestCases/TC3.robot">
+<test id="s1-t1" name="Scenario 2: Add and Complete the order" line="15">
+<kw name="Open Browser" library="Browser">
+<arg>${URL}</arg>
+<arg>browser=chromium</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230710 08:10:42.764" level="INFO">{"browser": "chromium", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/Users/ayushisingh/Documents/RobotFrameworkwithPython/browser/traces/6448c0c7-a765-4e80-acef-00e695062afa"}</msg>
-<msg timestamp="20230710 08:10:43.020" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/Users/ayushisingh/Documents/RobotFrameworkwithPython/browser/traces/6448c0c7-a765-4e80-acef-00e695062afa"}</msg>
-<status status="PASS" starttime="20230710 08:10:42.763" endtime="20230710 08:10:43.020"/>
-</kw>
-<kw name="New Context" library="Browser">
-<arg>viewport={'width': 1920, 'height': 1080}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230710 08:10:43.021" level="INFO">{
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<msg timestamp="20230718 21:13:25.578" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20230718 21:13:25.579" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/Users/ayushisingh/Documents/RobotFrameworkwithPython/browser/traces/208b0d78-3065-4c61-8c7c-14bc5f475a5d"}</msg>
+<msg timestamp="20230718 21:13:25.885" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/Users/ayushisingh/Documents/RobotFrameworkwithPython/browser/traces/208b0d78-3065-4c61-8c7c-14bc5f475a5d"}</msg>
+<msg timestamp="20230718 21:13:25.885" level="INFO">{
   "acceptDownloads": true,
-  "bypassCSP": false,
+  "bypassCSP": true,
   "forcedColors": "none",
   "hideRfBrowser": false,
   "ignoreHTTPSErrors": false,
@@ -26,26 +21,236 @@
   "offline": false,
   "reducedMotion": "no-preference",
   "viewport": {
-    "height": 1080,
-    "width": 1920
+    "width": 1280,
+    "height": 720
   },
   "deprecated_pos_args": []
 }</msg>
-<msg timestamp="20230710 08:10:43.036" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230710 08:10:43.036" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 1080, 'width': 1920}, 'deprecated_pos_args': []}</msg>
-<status status="PASS" starttime="20230710 08:10:43.021" endtime="20230710 08:10:43.036"/>
+<msg timestamp="20230718 21:13:25.894" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230718 21:13:25.894" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'width': 1280, 'height': 720}, 'deprecated_pos_args': []}</msg>
+<msg timestamp="20230718 21:13:26.645" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<status status="PASS" starttime="20230718 21:13:25.578" endtime="20230718 21:13:26.645"/>
 </kw>
-<kw name="New Page" library="Browser">
-<arg>https://playwright.dev</arg>
+<kw name="Fill Text" library="Browser">
+<arg>id=user-name</arg>
+<arg>${UserName}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230718 21:13:26.646" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<status status="PASS" starttime="20230718 21:13:26.646" endtime="20230718 21:13:26.686"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>//*[@id="password"]</arg>
+<arg>${PassWord}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230718 21:13:26.687" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
+<status status="PASS" starttime="20230718 21:13:26.686" endtime="20230718 21:13:26.725"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="login-button"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230718 21:13:26.725" endtime="20230718 21:13:26.800"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>(//*[text()='Add to cart'])[1]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230718 21:13:26.800" endtime="20230718 21:13:26.842"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>(//*[text()='Add to cart'])[2]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230718 21:13:26.842" endtime="20230718 21:13:26.866"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${CartItem}</var>
+<arg>//*[@class="shopping_cart_badge"]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230718 21:13:26.878" level="INFO">Text: '2'</msg>
+<msg timestamp="20230718 21:13:26.878" level="INFO">${CartItem} = 2</msg>
+<status status="PASS" starttime="20230718 21:13:26.866" endtime="20230718 21:13:26.878"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${CartItem}</arg>
+<arg>2</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230718 21:13:26.878" endtime="20230718 21:13:26.878"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="shopping_cart_container"]/a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230718 21:13:26.879" endtime="20230718 21:13:26.913"/>
+</kw>
+<kw name="Get Element Count" library="Browser">
+<var>${CartItemviewCount}</var>
+<arg>//*[@class="cart_item"]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<msg timestamp="20230718 21:13:26.916" level="INFO">${CartItemviewCount} = 2</msg>
+<status status="PASS" starttime="20230718 21:13:26.913" endtime="20230718 21:13:26.917"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${CartItemviewCount}</arg>
+<arg>2</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<msg timestamp="20230718 21:13:26.917" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20230718 21:13:26.917" endtime="20230718 21:13:26.917"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="checkout"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230718 21:13:26.917" endtime="20230718 21:13:26.955"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>//*[@id="first-name"]</arg>
+<arg>${FirstName}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230718 21:13:26.956" level="INFO">Fills the text 'Test' in the given field.</msg>
+<status status="PASS" starttime="20230718 21:13:26.956" endtime="20230718 21:13:26.965"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>//*[@id="last-name"]</arg>
+<arg>${LatsName}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230718 21:13:26.966" level="INFO">Fills the text 'Test1' in the given field.</msg>
+<status status="PASS" starttime="20230718 21:13:26.965" endtime="20230718 21:13:26.972"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>//*[@id="postal-code"]</arg>
+<arg>${Zip}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230718 21:13:26.972" level="INFO">Fills the text '12345' in the given field.</msg>
+<status status="PASS" starttime="20230718 21:13:26.972" endtime="20230718 21:13:26.978"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="continue"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230718 21:13:26.978" endtime="20230718 21:13:27.019"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${Cartqty1}</var>
+<arg>(//*[@class="cart_quantity"])[1]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230718 21:13:27.025" level="INFO">Text: '1'</msg>
+<msg timestamp="20230718 21:13:27.025" level="INFO">${Cartqty1} = 1</msg>
+<status status="PASS" starttime="20230718 21:13:27.019" endtime="20230718 21:13:27.026"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Cartqty1}</arg>
+<arg>1</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230718 21:13:27.026" endtime="20230718 21:13:27.026"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${Cartqty2}</var>
+<arg>(//*[@class="cart_quantity"])[2]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230718 21:13:27.030" level="INFO">Text: '1'</msg>
+<msg timestamp="20230718 21:13:27.031" level="INFO">${Cartqty2} = 1</msg>
+<status status="PASS" starttime="20230718 21:13:27.026" endtime="20230718 21:13:27.031"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Cartqty2}</arg>
+<arg>1</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230718 21:13:27.031" endtime="20230718 21:13:27.031"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${total}</var>
+<arg>//*[@class="summary_info_label summary_total_label"]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230718 21:13:27.035" level="INFO">Text: 'Total: $49.66'</msg>
+<msg timestamp="20230718 21:13:27.035" level="INFO">${total} = Total: $49.66</msg>
+<status status="PASS" starttime="20230718 21:13:27.031" endtime="20230718 21:13:27.035"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${total}</arg>
+<arg>Total: $49.66</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230718 21:13:27.035" endtime="20230718 21:13:27.035"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20230718 21:13:27.101" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230718 21:13:27.035" endtime="20230718 21:13:27.102"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>//*[@id="finish"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230718 21:13:27.102" endtime="20230718 21:13:27.136"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20230718 21:13:27.197" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230718 21:13:27.136" endtime="20230718 21:13:27.197"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${Confirmation Message}</var>
+<arg>//*[@id="checkout_complete_container"]/h2</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230718 21:13:27.202" level="INFO">Text: 'Thank you for your order!'</msg>
+<msg timestamp="20230718 21:13:27.202" level="INFO">${Confirmation Message} = Thank you for your order!</msg>
+<status status="PASS" starttime="20230718 21:13:27.198" endtime="20230718 21:13:27.202"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Confirmation Message}</arg>
+<arg>Thank you for your order!</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230718 21:13:27.202" endtime="20230718 21:13:27.202"/>
+</kw>
+<kw name="Close Browser" library="Browser">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<msg timestamp="20230710 08:10:44.018" level="INFO">Successfully initialized new page object and opened url: https://playwright.dev</msg>
-<status status="PASS" starttime="20230710 08:10:43.036" endtime="20230710 08:10:44.018"/>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230718 21:13:27.282" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230718 21:13:27.202" endtime="20230718 21:13:27.282"/>
 </kw>
-<status status="PASS" starttime="20230710 08:10:42.762" endtime="20230710 08:10:44.019"/>
+<status status="PASS" starttime="20230718 21:13:25.577" endtime="20230718 21:13:27.282"/>
 </test>
-<status status="PASS" starttime="20230710 08:10:42.317" endtime="20230710 08:10:44.102"/>
+<status status="PASS" starttime="20230718 21:13:25.279" endtime="20230718 21:13:27.285"/>
 </suite>
 <statistics>
 <total>
@@ -54,9 +259,10 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TC2">TC2</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC3">TC3</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20230718 21:13:25.578" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
 </errors>
 </robot>

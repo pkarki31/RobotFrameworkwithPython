@@ -14,7 +14,7 @@ ${Zip}    12345
 
 Scenario 2: Add and Complete the order
     Open Browser    ${URL}    browser=chromium
-    Fill Text    //*[@id="user-name"]    ${UserName}    #Login
+    Fill Text    id=user-name    ${UserName}    #Login
     Fill Text    //*[@id="password"]    ${PassWord}
     Click    //*[@id="login-button"]                    #Add Items to cart
     Click    (//*[text()='Add to cart'])[1]
