@@ -1,35 +1,61 @@
-{"level":30,"time":"2023-07-18T20:34:09.605Z","pid":26004,"hostname":"Ayushis-MacBook-Air.local","msg":"Listening on 49470"}
-{"level":30,"time":"2023-07-18T20:34:09.682Z","pid":26004,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-07-18T20:34:09.683Z","pid":26004,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-07-18T20:34:09.685Z","pid":26004,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-07-18T20:34:09.685Z","pid":26004,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method getBrowserCatalog"}
-================= Original suppressed error =================
-Error: Browser has been closed.
-    at PlaywrightState.getActiveBrowser (/Users/ayushisingh/Documents/RobotFrameworkwithPython/venv/lib/python3.11/site-packages/Browser/wrapper/index.js:9436:15)
-    at PlaywrightServer.getActiveBrowser (/Users/ayushisingh/Documents/RobotFrameworkwithPython/venv/lib/python3.11/site-packages/Browser/wrapper/index.js:9969:59)
-    at PlaywrightServer.setTimeout (/Users/ayushisingh/Documents/RobotFrameworkwithPython/venv/lib/python3.11/site-packages/Browser/wrapper/index.js:10214:57)
-    at /Users/ayushisingh/Documents/RobotFrameworkwithPython/venv/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
-    at Http2ServerCallStream.safeDeserializeMessage (/Users/ayushisingh/Documents/RobotFrameworkwithPython/venv/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:395:13)
-    at ServerHttp2Stream.onEnd (/Users/ayushisingh/Documents/RobotFrameworkwithPython/venv/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:382:22)
-    at ServerHttp2Stream.emit (node:events:402:35)
-    at endReadableNT (node:internal/streams/readable:1343:12)
-    at processTicksAndRejections (node:internal/process/task_queues:83:21)
-=============================================================
-{"level":30,"time":"2023-07-18T20:34:09.692Z","pid":26004,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-07-18T20:34:09.692Z","pid":26004,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method getBrowserCatalog"}
-================= Original suppressed error =================
-Error: Browser has been closed.
-    at PlaywrightState.getActiveBrowser (/Users/ayushisingh/Documents/RobotFrameworkwithPython/venv/lib/python3.11/site-packages/Browser/wrapper/index.js:9436:15)
-    at PlaywrightServer.getActiveBrowser (/Users/ayushisingh/Documents/RobotFrameworkwithPython/venv/lib/python3.11/site-packages/Browser/wrapper/index.js:9969:59)
-    at PlaywrightServer.setTimeout (/Users/ayushisingh/Documents/RobotFrameworkwithPython/venv/lib/python3.11/site-packages/Browser/wrapper/index.js:10214:57)
-    at /Users/ayushisingh/Documents/RobotFrameworkwithPython/venv/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
-    at Http2ServerCallStream.safeDeserializeMessage (/Users/ayushisingh/Documents/RobotFrameworkwithPython/venv/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:395:13)
-    at ServerHttp2Stream.onEnd (/Users/ayushisingh/Documents/RobotFrameworkwithPython/venv/lib/python3.11/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:382:22)
-    at ServerHttp2Stream.emit (node:events:402:35)
-    at endReadableNT (node:internal/streams/readable:1343:12)
-    at processTicksAndRejections (node:internal/process/task_queues:83:21)
-=============================================================
-{"level":30,"time":"2023-07-18T20:34:09.694Z","pid":26004,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-07-18T20:34:09.694Z","pid":26004,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-07-18T20:34:09.703Z","pid":26004,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2023-07-18T20:34:09.703Z","pid":26004,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2023-07-20T19:58:58.303Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Listening on 55708"}
+{"level":30,"time":"2023-07-20T19:58:58.375Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-20T19:58:58.375Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-20T19:58:58.377Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-20T19:58:58.377Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-20T19:58:58.379Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-07-20T19:58:58.644Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method newBrowser"}
+{"level":30,"time":"2023-07-20T19:58:58.647Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method newContext"}
+{"level":30,"time":"2023-07-20T19:58:58.647Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-07-20T19:58:58.647Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Trace file: "}
+{"level":30,"time":"2023-07-20T19:58:58.654Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method newContext"}
+{"level":30,"time":"2023-07-20T19:58:58.654Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Changed active context"}
+{"level":30,"time":"2023-07-20T19:58:58.657Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method newPage"}
+{"level":30,"time":"2023-07-20T19:58:58.657Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-07-20T19:58:59.004Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Video path: undefined"}
+{"level":30,"time":"2023-07-20T19:58:59.004Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Changed active page"}
+{"level":30,"time":"2023-07-20T19:58:59.475Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method newPage"}
+{"level":30,"time":"2023-07-20T19:58:59.479Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-07-20T19:58:59.479Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Strict mode is enabled, find Locator with id=user-name in page."}
+{"level":30,"time":"2023-07-20T19:58:59.504Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method fillText"}
+{"level":30,"time":"2023-07-20T19:58:59.507Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-07-20T19:58:59.507Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Strict mode is enabled, find Locator with xpath=//*[@id='password'] in page."}
+{"level":30,"time":"2023-07-20T19:58:59.516Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method fillText"}
+{"level":30,"time":"2023-07-20T19:58:59.518Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method click"}
+{"level":30,"time":"2023-07-20T19:58:59.518Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Strict mode is enabled, find Locator with xpath=//*[@id='login-button'] in page."}
+{"level":30,"time":"2023-07-20T19:58:59.567Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method click"}
+{"level":30,"time":"2023-07-20T19:58:59.569Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method click"}
+{"level":30,"time":"2023-07-20T19:58:59.569Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Strict mode is enabled, find Locator with xpath=(//*[text()='Add to cart'])[1] in page."}
+{"level":30,"time":"2023-07-20T19:58:59.599Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method click"}
+{"level":30,"time":"2023-07-20T19:58:59.601Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method click"}
+{"level":30,"time":"2023-07-20T19:58:59.601Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Strict mode is enabled, find Locator with xpath=(//*[text()='Add to cart'])[2] in page."}
+{"level":30,"time":"2023-07-20T19:58:59.638Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method click"}
+{"level":30,"time":"2023-07-20T19:58:59.640Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method getText"}
+{"level":30,"time":"2023-07-20T19:58:59.640Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Strict mode is enabled, find Locator with xpath=//*[@class='shopping_cart_badge'] in page."}
+{"level":30,"time":"2023-07-20T19:58:59.650Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Retrieved text for element xpath=//*[@class='shopping_cart_badge'] containing 2"}
+{"level":30,"time":"2023-07-20T19:58:59.650Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method getText"}
+{"level":30,"time":"2023-07-20T19:58:59.653Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-20T19:58:59.654Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-20T19:58:59.655Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-20T19:58:59.656Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-20T19:58:59.657Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Changed active context"}
+{"level":30,"time":"2023-07-20T19:58:59.657Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Changing current active page"}
+{"level":30,"time":"2023-07-20T19:58:59.657Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Changed active page"}
+{"level":30,"time":"2023-07-20T19:58:59.662Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-20T19:58:59.663Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-20T19:58:59.664Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2023-07-20T19:58:59.664Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2023-07-20T19:58:59.665Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2023-07-20T19:58:59.665Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2023-07-20T19:58:59.666Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-20T19:58:59.667Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-20T19:58:59.667Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Changed active context"}
+{"level":30,"time":"2023-07-20T19:58:59.667Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Changing current active page"}
+{"level":30,"time":"2023-07-20T19:58:59.667Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Changed active page"}
+{"level":30,"time":"2023-07-20T19:58:59.670Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method closeContext"}
+{"level":30,"time":"2023-07-20T19:58:59.691Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Removed page=7578bc08-0db3-4a57-8125-378b7b336c83 from context=2399e8e3-4a79-42b1-8c3c-d2c41a8ae720 page stack"}
+{"level":30,"time":"2023-07-20T19:58:59.697Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method closeContext"}
+{"level":30,"time":"2023-07-20T19:58:59.699Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-20T19:58:59.700Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-07-20T19:58:59.714Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-07-20T19:58:59.782Z","pid":29764,"hostname":"Ayushis-MacBook-Air.local","msg":"End of node method closeAllBrowsers"}

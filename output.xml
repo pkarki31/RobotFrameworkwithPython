@@ -1,19 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.4 on darwin)" generated="20230718 21:34:09.394" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.11.4 on darwin)" generated="20230720 20:58:58.080" rpa="false" schemaversion="4">
 <suite id="s1" name="LoginTest" source="/Users/ayushisingh/Documents/RobotFrameworkwithPython/TestCases/LoginTest.robot">
-<test id="s1-t1" name="LoginTest" line="11">
-<kw name="Open My Browser ${URL}">
+<test id="s1-t1" name="LoginTest" line="17">
+<kw name="Open My Browser" library="LoginPageKeywords">
+<arg>${URL}</arg>
 <arg>${Browser}</arg>
-<msg timestamp="20230718 21:34:09.687" level="FAIL">No keyword with name 'Open My Browser ${URL}' found.</msg>
-<status status="FAIL" starttime="20230718 21:34:09.687" endtime="20230718 21:34:09.687"/>
+<kw name="Open Browser" library="Browser">
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<msg timestamp="20230720 20:58:58.379" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20230720 20:58:58.379" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/Users/ayushisingh/Documents/RobotFrameworkwithPython/browser/traces/4c7351ba-2d9f-410f-b27b-6c31b9518ee6"}</msg>
+<msg timestamp="20230720 20:58:58.646" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/Users/ayushisingh/Documents/RobotFrameworkwithPython/browser/traces/4c7351ba-2d9f-410f-b27b-6c31b9518ee6"}</msg>
+<msg timestamp="20230720 20:58:58.646" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "hideRfBrowser": false,
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  },
+  "deprecated_pos_args": []
+}</msg>
+<msg timestamp="20230720 20:58:58.657" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230720 20:58:58.657" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
+<msg timestamp="20230720 20:58:59.477" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<status status="PASS" starttime="20230720 20:58:58.378" endtime="20230720 20:58:59.478"/>
 </kw>
-<kw name="Enter UserName">
+<status status="PASS" starttime="20230720 20:58:58.378" endtime="20230720 20:58:59.478"/>
+</kw>
+<kw name="Enter UserName" library="LoginPageKeywords">
 <arg>${UserName}</arg>
-<status status="NOT RUN" starttime="20230718 21:34:09.689" endtime="20230718 21:34:09.689"/>
+<kw name="Fill Text" library="Browser">
+<arg>${loginUserName}</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230720 20:58:59.478" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<status status="PASS" starttime="20230720 20:58:59.478" endtime="20230720 20:58:59.506"/>
 </kw>
-<status status="FAIL" starttime="20230718 21:34:09.684" endtime="20230718 21:34:09.689">No keyword with name 'Open My Browser ${URL}' found.</status>
+<status status="PASS" starttime="20230720 20:58:59.478" endtime="20230720 20:58:59.506"/>
+</kw>
+<kw name="Enter Password" library="LoginPageKeywords">
+<arg>${Password}</arg>
+<kw name="Fill Text" library="Browser">
+<arg>${loginPassword}</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230720 20:58:59.507" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
+<status status="PASS" starttime="20230720 20:58:59.507" endtime="20230720 20:58:59.517"/>
+</kw>
+<status status="PASS" starttime="20230720 20:58:59.506" endtime="20230720 20:58:59.517"/>
+</kw>
+<kw name="Click Login" library="LoginPageKeywords">
+<kw name="Click" library="Browser">
+<arg>${LoginButton}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230720 20:58:59.517" endtime="20230720 20:58:59.568"/>
+</kw>
+<status status="PASS" starttime="20230720 20:58:59.517" endtime="20230720 20:58:59.568"/>
+</kw>
+<kw name="Add Product 1 to Cart" library="LoginPageKeywords">
+<kw name="Click" library="Browser">
+<arg>${addProduct1tocart}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230720 20:58:59.568" endtime="20230720 20:58:59.601"/>
+</kw>
+<status status="PASS" starttime="20230720 20:58:59.568" endtime="20230720 20:58:59.601"/>
+</kw>
+<kw name="Add Product 2 to Cart" library="LoginPageKeywords">
+<kw name="Click" library="Browser">
+<arg>${addProduct2tocart}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230720 20:58:59.601" endtime="20230720 20:58:59.639"/>
+</kw>
+<status status="PASS" starttime="20230720 20:58:59.601" endtime="20230720 20:58:59.639"/>
+</kw>
+<kw name="Verify Product count in Shopping Cart" library="LoginPageKeywords">
+<arg>1</arg>
+<kw name="Get Text" library="Browser">
+<var>${CartItem}</var>
+<arg>${badgeShoppingCart}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230720 20:58:59.651" level="INFO">Text: '2'</msg>
+<msg timestamp="20230720 20:58:59.651" level="INFO">${CartItem} = 2</msg>
+<status status="PASS" starttime="20230720 20:58:59.639" endtime="20230720 20:58:59.651"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${CartItem}</arg>
+<arg>${cartCount}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<msg timestamp="20230720 20:58:59.652" level="FAIL">2 != 1</msg>
+<status status="FAIL" starttime="20230720 20:58:59.651" endtime="20230720 20:58:59.652"/>
+</kw>
+<status status="FAIL" starttime="20230720 20:58:59.639" endtime="20230720 20:58:59.652"/>
+</kw>
+<status status="FAIL" starttime="20230720 20:58:58.376" endtime="20230720 20:58:59.652">2 != 1</status>
 </test>
-<status status="FAIL" starttime="20230718 21:34:09.395" endtime="20230718 21:34:09.693"/>
+<status status="FAIL" starttime="20230720 20:58:58.081" endtime="20230720 20:58:59.698"/>
 </suite>
 <statistics>
 <total>
@@ -26,6 +129,6 @@
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230718 21:34:09.456" level="ERROR">Error in file '/Users/ayushisingh/Documents/RobotFrameworkwithPython/TestCases/LoginTest.robot' on line 3: Resource file 'PageResources/LoginPageKeywords.robot' does not exist.</msg>
+<msg timestamp="20230720 20:58:58.379" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
 </errors>
 </robot>
