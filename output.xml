@@ -1,134 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.4 on darwin)" generated="20230720 20:58:58.080" rpa="false" schemaversion="4">
-<suite id="s1" name="LoginTest" source="/Users/ayushisingh/Documents/RobotFrameworkwithPython/TestCases/LoginTest.robot">
-<test id="s1-t1" name="LoginTest" line="17">
-<kw name="Open My Browser" library="LoginPageKeywords">
+<robot generator="Robot 6.1 (Python 3.11.4 on darwin)" generated="20230731 19:57:28.291" rpa="false" schemaversion="4">
+<suite id="s1" name="searchProductTest" source="/Users/ayushisingh/Documents/RobotFrameworkwithPython/TestCases/searchProductTest.robot">
+<test id="s1-t1" name="Validating Product Search by Category" line="13">
+<kw name="Register Keyword To Run On Failure" library="SeleniumLibrary">
+<arg>NONE</arg>
+<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
+<msg timestamp="20230731 19:57:28.361" level="INFO">No keyword will be run on failure.</msg>
+<status status="PASS" starttime="20230731 19:57:28.361" endtime="20230731 19:57:28.361"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
-<arg>${Browser}</arg>
-<kw name="Open Browser" library="Browser">
-<arg>${URL}</arg>
-<arg>${browser}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
-<msg timestamp="20230720 20:58:58.379" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
-<msg timestamp="20230720 20:58:58.379" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/Users/ayushisingh/Documents/RobotFrameworkwithPython/browser/traces/4c7351ba-2d9f-410f-b27b-6c31b9518ee6"}</msg>
-<msg timestamp="20230720 20:58:58.646" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/Users/ayushisingh/Documents/RobotFrameworkwithPython/browser/traces/4c7351ba-2d9f-410f-b27b-6c31b9518ee6"}</msg>
-<msg timestamp="20230720 20:58:58.646" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": true,
-  "forcedColors": "none",
-  "hideRfBrowser": false,
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "viewport": {
-    "height": 720,
-    "width": 1280
-  },
-  "deprecated_pos_args": []
-}</msg>
-<msg timestamp="20230720 20:58:58.657" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230720 20:58:58.657" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
-<msg timestamp="20230720 20:58:59.477" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
-<status status="PASS" starttime="20230720 20:58:58.378" endtime="20230720 20:58:59.478"/>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230731 19:57:28.362" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com/'.</msg>
+<msg timestamp="20230731 19:57:28.363" level="INFO">Executing: /Users/ayushisingh/Documents/RobotFrameworkwithPython/venv/lib/python3.11/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json</msg>
+<status status="PASS" starttime="20230731 19:57:28.362" endtime="20230731 19:57:32.237"/>
 </kw>
-<status status="PASS" starttime="20230720 20:58:58.378" endtime="20230720 20:58:59.478"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230731 19:57:33.240" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230731 19:57:32.237" endtime="20230731 19:57:33.240"/>
 </kw>
-<kw name="Enter UserName" library="LoginPageKeywords">
-<arg>${UserName}</arg>
-<kw name="Fill Text" library="Browser">
-<arg>${loginUserName}</arg>
-<arg>${username}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230720 20:58:59.478" level="INFO">Fills the text 'standard_user' in the given field.</msg>
-<status status="PASS" starttime="20230720 20:58:59.478" endtime="20230720 20:58:59.506"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="gdpr-banner-accept"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230731 19:57:33.241" level="INFO">Clicking element 'xpath://*[@id="gdpr-banner-accept"]'.</msg>
+<status status="PASS" starttime="20230731 19:57:33.240" endtime="20230731 19:57:33.300"/>
 </kw>
-<status status="PASS" starttime="20230720 20:58:59.478" endtime="20230720 20:58:59.506"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://input[@aria-label='Search for anything']</arg>
+<arg>${searchProduct}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230731 19:57:33.301" level="INFO">Typing text 'MacBook' into text field 'xpath://input[@aria-label='Search for anything']'.</msg>
+<status status="PASS" starttime="20230731 19:57:33.301" endtime="20230731 19:57:33.417"/>
 </kw>
-<kw name="Enter Password" library="LoginPageKeywords">
-<arg>${Password}</arg>
-<kw name="Fill Text" library="Browser">
-<arg>${loginPassword}</arg>
-<arg>${password}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230720 20:58:59.507" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
-<status status="PASS" starttime="20230720 20:58:59.507" endtime="20230720 20:58:59.517"/>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>//select[@aria-label='Select a category for search']</arg>
+<arg>${searchCategory}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230731 19:57:33.417" level="INFO">Selecting options from selection list '//select[@aria-label='Select a category for search']' by label Computers/Tablets &amp; Networking.</msg>
+<status status="PASS" starttime="20230731 19:57:33.417" endtime="20230731 19:57:33.462"/>
 </kw>
-<status status="PASS" starttime="20230720 20:58:59.506" endtime="20230720 20:58:59.517"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='Search']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230731 19:57:33.463" level="INFO">Clicking element '//input[@value='Search']'.</msg>
+<status status="PASS" starttime="20230731 19:57:33.463" endtime="20230731 19:57:35.445"/>
 </kw>
-<kw name="Click Login" library="LoginPageKeywords">
-<kw name="Click" library="Browser">
-<arg>${LoginButton}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230720 20:58:59.517" endtime="20230720 20:58:59.568"/>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="item4d8cbf0397"]/div/div[2]/a</arg>
+<arg>${searchProduct}</arg>
+<arg>Not Matched</arg>
+<arg>True</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230731 19:57:35.530" level="INFO">Element 'xpath://*[@id="item4d8cbf0397"]/div/div[2]/a' contains text 'MacBook'.</msg>
+<status status="PASS" starttime="20230731 19:57:35.445" endtime="20230731 19:57:35.530"/>
 </kw>
-<status status="PASS" starttime="20230720 20:58:59.517" endtime="20230720 20:58:59.568"/>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230731 19:57:35.530" endtime="20230731 19:57:35.608"/>
 </kw>
-<kw name="Add Product 1 to Cart" library="LoginPageKeywords">
-<kw name="Click" library="Browser">
-<arg>${addProduct1tocart}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230720 20:58:59.568" endtime="20230720 20:58:59.601"/>
-</kw>
-<status status="PASS" starttime="20230720 20:58:59.568" endtime="20230720 20:58:59.601"/>
-</kw>
-<kw name="Add Product 2 to Cart" library="LoginPageKeywords">
-<kw name="Click" library="Browser">
-<arg>${addProduct2tocart}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230720 20:58:59.601" endtime="20230720 20:58:59.639"/>
-</kw>
-<status status="PASS" starttime="20230720 20:58:59.601" endtime="20230720 20:58:59.639"/>
-</kw>
-<kw name="Verify Product count in Shopping Cart" library="LoginPageKeywords">
-<arg>1</arg>
-<kw name="Get Text" library="Browser">
-<var>${CartItem}</var>
-<arg>${badgeShoppingCart}</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230720 20:58:59.651" level="INFO">Text: '2'</msg>
-<msg timestamp="20230720 20:58:59.651" level="INFO">${CartItem} = 2</msg>
-<status status="PASS" starttime="20230720 20:58:59.639" endtime="20230720 20:58:59.651"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${CartItem}</arg>
-<arg>${cartCount}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<msg timestamp="20230720 20:58:59.652" level="FAIL">2 != 1</msg>
-<status status="FAIL" starttime="20230720 20:58:59.651" endtime="20230720 20:58:59.652"/>
-</kw>
-<status status="FAIL" starttime="20230720 20:58:59.639" endtime="20230720 20:58:59.652"/>
-</kw>
-<status status="FAIL" starttime="20230720 20:58:58.376" endtime="20230720 20:58:59.652">2 != 1</status>
+<status status="PASS" starttime="20230731 19:57:28.361" endtime="20230731 19:57:35.609"/>
 </test>
-<status status="FAIL" starttime="20230720 20:58:58.081" endtime="20230720 20:58:59.698"/>
+<status status="PASS" starttime="20230731 19:57:28.292" endtime="20230731 19:57:35.609"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="LoginTest">LoginTest</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="searchProductTest">searchProductTest</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230720 20:58:58.379" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
 </errors>
 </robot>
