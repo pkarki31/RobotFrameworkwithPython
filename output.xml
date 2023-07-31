@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.4 on darwin)" generated="20230731 19:57:28.291" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.11.4 on darwin)" generated="20230731 20:17:20.611" rpa="false" schemaversion="4">
 <suite id="s1" name="searchProductTest" source="/Users/ayushisingh/Documents/RobotFrameworkwithPython/TestCases/searchProductTest.robot">
-<test id="s1-t1" name="Validating Product Search by Category" line="13">
+<test id="s1-t1" name="Validating Product Search by Category (In Chrome browser)" line="14">
 <kw name="Register Keyword To Run On Failure" library="SeleniumLibrary">
 <arg>NONE</arg>
 <doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
-<msg timestamp="20230731 19:57:28.361" level="INFO">No keyword will be run on failure.</msg>
-<status status="PASS" starttime="20230731 19:57:28.361" endtime="20230731 19:57:28.361"/>
+<msg timestamp="20230731 20:17:20.676" level="INFO">No keyword will be run on failure.</msg>
+<status status="PASS" starttime="20230731 20:17:20.676" endtime="20230731 20:17:20.676"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
-<arg>${BROWSER}</arg>
+<arg>${BROWSER1}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230731 19:57:28.362" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com/'.</msg>
-<msg timestamp="20230731 19:57:28.363" level="INFO">Executing: /Users/ayushisingh/Documents/RobotFrameworkwithPython/venv/lib/python3.11/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json</msg>
-<status status="PASS" starttime="20230731 19:57:28.362" endtime="20230731 19:57:32.237"/>
+<msg timestamp="20230731 20:17:20.677" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com/'.</msg>
+<msg timestamp="20230731 20:17:20.677" level="INFO">Executing: /Users/ayushisingh/Documents/RobotFrameworkwithPython/venv/lib/python3.11/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json</msg>
+<status status="PASS" starttime="20230731 20:17:20.676" endtime="20230731 20:17:24.273"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230731 19:57:33.240" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20230731 19:57:32.237" endtime="20230731 19:57:33.240"/>
+<msg timestamp="20230731 20:17:25.275" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230731 20:17:24.274" endtime="20230731 20:17:25.275"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath://*[@id="gdpr-banner-accept"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230731 19:57:33.241" level="INFO">Clicking element 'xpath://*[@id="gdpr-banner-accept"]'.</msg>
-<status status="PASS" starttime="20230731 19:57:33.240" endtime="20230731 19:57:33.300"/>
+<msg timestamp="20230731 20:17:25.276" level="INFO">Clicking element 'xpath://*[@id="gdpr-banner-accept"]'.</msg>
+<status status="PASS" starttime="20230731 20:17:25.275" endtime="20230731 20:17:25.335"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath://input[@aria-label='Search for anything']</arg>
 <arg>${searchProduct}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230731 19:57:33.301" level="INFO">Typing text 'MacBook' into text field 'xpath://input[@aria-label='Search for anything']'.</msg>
-<status status="PASS" starttime="20230731 19:57:33.301" endtime="20230731 19:57:33.417"/>
+<msg timestamp="20230731 20:17:25.336" level="INFO">Typing text 'MacBook' into text field 'xpath://input[@aria-label='Search for anything']'.</msg>
+<status status="PASS" starttime="20230731 20:17:25.335" endtime="20230731 20:17:25.439"/>
 </kw>
 <kw name="Select From List By Label" library="SeleniumLibrary">
 <arg>//select[@aria-label='Select a category for search']</arg>
 <arg>${searchCategory}</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20230731 19:57:33.417" level="INFO">Selecting options from selection list '//select[@aria-label='Select a category for search']' by label Computers/Tablets &amp; Networking.</msg>
-<status status="PASS" starttime="20230731 19:57:33.417" endtime="20230731 19:57:33.462"/>
+<msg timestamp="20230731 20:17:25.439" level="INFO">Selecting options from selection list '//select[@aria-label='Select a category for search']' by label Computers/Tablets &amp; Networking.</msg>
+<status status="PASS" starttime="20230731 20:17:25.439" endtime="20230731 20:17:25.487"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//input[@value='Search']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230731 19:57:33.463" level="INFO">Clicking element '//input[@value='Search']'.</msg>
-<status status="PASS" starttime="20230731 19:57:33.463" endtime="20230731 19:57:35.445"/>
+<msg timestamp="20230731 20:17:25.487" level="INFO">Clicking element '//input[@value='Search']'.</msg>
+<status status="PASS" starttime="20230731 20:17:25.487" endtime="20230731 20:17:27.456"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>xpath://*[@id="item4d8cbf0397"]/div/div[2]/a</arg>
@@ -54,25 +54,95 @@
 <arg>Not Matched</arg>
 <arg>True</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20230731 19:57:35.530" level="INFO">Element 'xpath://*[@id="item4d8cbf0397"]/div/div[2]/a' contains text 'MacBook'.</msg>
-<status status="PASS" starttime="20230731 19:57:35.445" endtime="20230731 19:57:35.530"/>
+<msg timestamp="20230731 20:17:27.545" level="INFO">Element 'xpath://*[@id="item4d8cbf0397"]/div/div[2]/a' contains text 'MacBook'.</msg>
+<status status="PASS" starttime="20230731 20:17:27.456" endtime="20230731 20:17:27.545"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230731 19:57:35.530" endtime="20230731 19:57:35.608"/>
+<status status="PASS" starttime="20230731 20:17:27.545" endtime="20230731 20:17:27.634"/>
 </kw>
-<status status="PASS" starttime="20230731 19:57:28.361" endtime="20230731 19:57:35.609"/>
+<status status="PASS" starttime="20230731 20:17:20.676" endtime="20230731 20:17:27.634"/>
 </test>
-<status status="PASS" starttime="20230731 19:57:28.292" endtime="20230731 19:57:35.609"/>
+<test id="s1-t2" name="Validating Product Search by Category (In safari browser)" line="27">
+<kw name="Register Keyword To Run On Failure" library="SeleniumLibrary">
+<arg>NONE</arg>
+<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
+<msg timestamp="20230731 20:17:27.635" level="INFO">No keyword will be run on failure.</msg>
+<status status="PASS" starttime="20230731 20:17:27.635" endtime="20230731 20:17:27.635"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER2}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230731 20:17:27.635" level="INFO">Opening browser 'safari' to base url 'https://www.ebay.com/'.</msg>
+<status status="PASS" starttime="20230731 20:17:27.635" endtime="20230731 20:17:31.881"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230731 20:17:31.881" endtime="20230731 20:17:31.893"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230731 20:17:33.896" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230731 20:17:31.894" endtime="20230731 20:17:33.897"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="gdpr-banner-accept"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230731 20:17:33.899" level="INFO">Clicking element 'xpath://*[@id="gdpr-banner-accept"]'.</msg>
+<status status="PASS" starttime="20230731 20:17:33.897" endtime="20230731 20:17:33.950"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://input[@aria-label='Search for anything']</arg>
+<arg>${searchProduct}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230731 20:17:33.951" level="INFO">Typing text 'MacBook' into text field 'xpath://input[@aria-label='Search for anything']'.</msg>
+<status status="PASS" starttime="20230731 20:17:33.951" endtime="20230731 20:17:34.014"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>//select[@aria-label='Select a category for search']</arg>
+<arg>${searchCategory}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230731 20:17:34.015" level="INFO">Selecting options from selection list '//select[@aria-label='Select a category for search']' by label Computers/Tablets &amp; Networking.</msg>
+<status status="PASS" starttime="20230731 20:17:34.015" endtime="20230731 20:17:34.056"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='Search']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230731 20:17:34.057" level="INFO">Clicking element '//input[@value='Search']'.</msg>
+<status status="PASS" starttime="20230731 20:17:34.056" endtime="20230731 20:17:34.078"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="item4d8cbf0397"]/div/div[2]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230731 20:17:34.078" endtime="20230731 20:17:35.491"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="item4d8cbf0397"]/div/div[2]/a</arg>
+<arg>${searchProduct}</arg>
+<arg>Not Matched</arg>
+<arg>True</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230731 20:17:35.701" level="INFO">Element 'xpath://*[@id="item4d8cbf0397"]/div/div[2]/a' contains text 'MacBook'.</msg>
+<status status="PASS" starttime="20230731 20:17:35.491" endtime="20230731 20:17:35.701"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230731 20:17:35.702" endtime="20230731 20:17:35.914"/>
+</kw>
+<status status="PASS" starttime="20230731 20:17:27.634" endtime="20230731 20:17:35.915"/>
+</test>
+<status status="PASS" starttime="20230731 20:17:20.611" endtime="20230731 20:17:35.917"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="searchProductTest">searchProductTest</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="searchProductTest">searchProductTest</stat>
 </suite>
 </statistics>
 <errors>
