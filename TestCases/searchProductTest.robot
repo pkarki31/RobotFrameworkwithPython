@@ -5,16 +5,16 @@ Library     SeleniumLibrary
 
 *** Variables ***
 ${URL}      https://www.ebay.com/
-${BROWSER1}        Chrome
-${BROWSER2}        safari
+${BROWSER-Chrome}        Chrome
+${BROWSER-Safari}        safari
 ${searchCategory}   Computers/Tablets & Networking
 ${searchProduct}    MacBook
 
 *** Test Cases ***
 Validating Product Search by Category (In Chrome browser)
     Register Keyword To Run On Failure      NONE
-    Open Browser   ${URL}    ${BROWSER1}
-    sleep    1 seconds
+    Open Browser   ${URL}    ${BROWSER-Chrome}
+    sleep    2 seconds
     Click Element   xpath://*[@id="gdpr-banner-accept"]
     input text  xpath://input[@aria-label='Search for anything']     ${searchProduct}
     Select From List By Label   //select[@aria-label='Select a category for search']    ${searchCategory}
@@ -26,8 +26,7 @@ Validating Product Search by Category (In Chrome browser)
 
 Validating Product Search by Category (In safari browser)
     Register Keyword To Run On Failure      NONE
-    Open Browser   ${URL}    ${BROWSER2}
-    maximize browser window
+    Open Browser   ${URL}    ${BROWSER-Safari}
     sleep    2 seconds
     Click Element   xpath://*[@id="gdpr-banner-accept"]
     input text  xpath://input[@aria-label='Search for anything']     ${searchProduct}

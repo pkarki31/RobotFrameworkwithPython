@@ -1,148 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.4 on darwin)" generated="20230731 20:17:20.611" rpa="false" schemaversion="4">
-<suite id="s1" name="searchProductTest" source="/Users/ayushisingh/Documents/RobotFrameworkwithPython/TestCases/searchProductTest.robot">
-<test id="s1-t1" name="Validating Product Search by Category (In Chrome browser)" line="14">
-<kw name="Register Keyword To Run On Failure" library="SeleniumLibrary">
-<arg>NONE</arg>
-<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
-<msg timestamp="20230731 20:17:20.676" level="INFO">No keyword will be run on failure.</msg>
-<status status="PASS" starttime="20230731 20:17:20.676" endtime="20230731 20:17:20.676"/>
+<robot generator="Robot 6.1 (Python 3.11.4 on darwin)" generated="20230802 20:41:32.392" rpa="false" schemaversion="4">
+<suite id="s1" name="DBTest" source="/Users/ayushisingh/Documents/RobotFrameworkwithPython/TestCases/DBTest.robot">
+<kw name="Connect To Database" library="DatabaseLibrary" type="SETUP">
+<arg>pymysql</arg>
+<arg>${DBName}</arg>
+<arg>${DBUser}</arg>
+<arg>${DBPass}</arg>
+<arg>${DBHost}</arg>
+<arg>${DBPort}</arg>
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
+connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
+<msg timestamp="20230802 20:41:32.410" level="INFO">Connecting using : pymysql.connect(db=robotDB, user=root, passwd=***, host=localhost, port=3306, charset=None) </msg>
+<status status="PASS" starttime="20230802 20:41:32.406" endtime="20230802 20:41:32.420"/>
 </kw>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>${BROWSER1}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230731 20:17:20.677" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com/'.</msg>
-<msg timestamp="20230731 20:17:20.677" level="INFO">Executing: /Users/ayushisingh/Documents/RobotFrameworkwithPython/venv/lib/python3.11/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json</msg>
-<status status="PASS" starttime="20230731 20:17:20.676" endtime="20230731 20:17:24.273"/>
+<test id="s1-t1" name="Execute SQL Script - Insert Data laptop table" line="22">
+<kw name="Execute Sql Script" library="DatabaseLibrary">
+<var>${output}</var>
+<arg>SQL/${DBName}_insertData.sql</arg>
+<doc>Executes the content of the `sqlScriptFileName` as SQL commands. Useful for setting the database to a known
+state before running your tests, or clearing out your test data after running each a test. Set optional input
+`sansTran` to True to run command without an explicit transaction commit or rollback.</doc>
+<msg timestamp="20230802 20:41:32.421" level="INFO">Executing : Execute SQL Script  |  SQL/robotDB_insertData.sql </msg>
+<msg timestamp="20230802 20:41:32.421" level="INFO">Executing statement from script file: insert into  laptop value ("LAP01","DELL","Dell Latitude 7430","704.99")</msg>
+<msg timestamp="20230802 20:41:32.425" level="INFO">Executing statement from script file: insert into  laptop value ("LAP02","DELL","Dell Precision 7520","339.99")</msg>
+<msg timestamp="20230802 20:41:32.426" level="INFO">Executing statement from script file: insert into  laptop value ("LAP03","DELL","Dell G15","949.99")</msg>
+<msg timestamp="20230802 20:41:32.428" level="INFO">Executing statement from script file: insert into  laptop value ("LAP04","DELL","Dell Precision 7760","1,099.99")</msg>
+<msg timestamp="20230802 20:41:32.438" level="INFO">${output} = None</msg>
+<status status="PASS" starttime="20230802 20:41:32.421" endtime="20230802 20:41:32.438"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1 seconds</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230731 20:17:25.275" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20230731 20:17:24.274" endtime="20230731 20:17:25.275"/>
+<kw name="Log" library="BuiltIn">
+<arg>${output}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230802 20:41:32.438" level="INFO">None</msg>
+<status status="PASS" starttime="20230802 20:41:32.438" endtime="20230802 20:41:32.438"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[@id="gdpr-banner-accept"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230731 20:17:25.276" level="INFO">Clicking element 'xpath://*[@id="gdpr-banner-accept"]'.</msg>
-<status status="PASS" starttime="20230731 20:17:25.275" endtime="20230731 20:17:25.335"/>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${output}</arg>
+<arg>None</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20230802 20:41:32.438" level="INFO">Argument types are:
+&lt;class 'NoneType'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20230802 20:41:32.438" endtime="20230802 20:41:32.438"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath://input[@aria-label='Search for anything']</arg>
-<arg>${searchProduct}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230731 20:17:25.336" level="INFO">Typing text 'MacBook' into text field 'xpath://input[@aria-label='Search for anything']'.</msg>
-<status status="PASS" starttime="20230731 20:17:25.335" endtime="20230731 20:17:25.439"/>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>//select[@aria-label='Select a category for search']</arg>
-<arg>${searchCategory}</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20230731 20:17:25.439" level="INFO">Selecting options from selection list '//select[@aria-label='Select a category for search']' by label Computers/Tablets &amp; Networking.</msg>
-<status status="PASS" starttime="20230731 20:17:25.439" endtime="20230731 20:17:25.487"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='Search']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230731 20:17:25.487" level="INFO">Clicking element '//input[@value='Search']'.</msg>
-<status status="PASS" starttime="20230731 20:17:25.487" endtime="20230731 20:17:27.456"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>xpath://*[@id="item4d8cbf0397"]/div/div[2]/a</arg>
-<arg>${searchProduct}</arg>
-<arg>Not Matched</arg>
-<arg>True</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20230731 20:17:27.545" level="INFO">Element 'xpath://*[@id="item4d8cbf0397"]/div/div[2]/a' contains text 'MacBook'.</msg>
-<status status="PASS" starttime="20230731 20:17:27.456" endtime="20230731 20:17:27.545"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230731 20:17:27.545" endtime="20230731 20:17:27.634"/>
-</kw>
-<status status="PASS" starttime="20230731 20:17:20.676" endtime="20230731 20:17:27.634"/>
+<status status="PASS" starttime="20230802 20:41:32.420" endtime="20230802 20:41:32.438"/>
 </test>
-<test id="s1-t2" name="Validating Product Search by Category (In safari browser)" line="27">
-<kw name="Register Keyword To Run On Failure" library="SeleniumLibrary">
-<arg>NONE</arg>
-<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
-<msg timestamp="20230731 20:17:27.635" level="INFO">No keyword will be run on failure.</msg>
-<status status="PASS" starttime="20230731 20:17:27.635" endtime="20230731 20:17:27.635"/>
+<test id="s1-t2" name="Retrieve DELL laptops from Laptop table" line="28">
+<kw name="Query" library="DatabaseLibrary">
+<var>${queryResults}</var>
+<arg>SELECT * FROM laptop where company="DELL";</arg>
+<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
+input `sansTran` to True to run command without an explicit transaction commit or rollback.
+Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
+<msg timestamp="20230802 20:41:32.438" level="INFO">Executing : Query  |  SELECT * FROM laptop where company="DELL"; </msg>
+<msg timestamp="20230802 20:41:32.443" level="INFO">${queryResults} = (('LAP01', 'DELL', 'Dell Latitude 7430', '704.99'), ('LAP02', 'DELL', 'Dell Precision 7520', '339.99'), ('LAP03', 'DELL', 'Dell G15', '949.99'), ('LAP04', 'DELL', 'Dell Precision 7760', '1,099.99'))</msg>
+<status status="PASS" starttime="20230802 20:41:32.438" endtime="20230802 20:41:32.443"/>
 </kw>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>${BROWSER2}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230731 20:17:27.635" level="INFO">Opening browser 'safari' to base url 'https://www.ebay.com/'.</msg>
-<status status="PASS" starttime="20230731 20:17:27.635" endtime="20230731 20:17:31.881"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${queryResults}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230802 20:41:32.444" endtime="20230802 20:41:32.444"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230731 20:17:31.881" endtime="20230731 20:17:31.893"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2 seconds</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230731 20:17:33.896" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230731 20:17:31.894" endtime="20230731 20:17:33.897"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[@id="gdpr-banner-accept"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230731 20:17:33.899" level="INFO">Clicking element 'xpath://*[@id="gdpr-banner-accept"]'.</msg>
-<status status="PASS" starttime="20230731 20:17:33.897" endtime="20230731 20:17:33.950"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath://input[@aria-label='Search for anything']</arg>
-<arg>${searchProduct}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230731 20:17:33.951" level="INFO">Typing text 'MacBook' into text field 'xpath://input[@aria-label='Search for anything']'.</msg>
-<status status="PASS" starttime="20230731 20:17:33.951" endtime="20230731 20:17:34.014"/>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>//select[@aria-label='Select a category for search']</arg>
-<arg>${searchCategory}</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20230731 20:17:34.015" level="INFO">Selecting options from selection list '//select[@aria-label='Select a category for search']' by label Computers/Tablets &amp; Networking.</msg>
-<status status="PASS" starttime="20230731 20:17:34.015" endtime="20230731 20:17:34.056"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@value='Search']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230731 20:17:34.057" level="INFO">Clicking element '//input[@value='Search']'.</msg>
-<status status="PASS" starttime="20230731 20:17:34.056" endtime="20230731 20:17:34.078"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath://*[@id="item4d8cbf0397"]/div/div[2]/a</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230731 20:17:34.078" endtime="20230731 20:17:35.491"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>xpath://*[@id="item4d8cbf0397"]/div/div[2]/a</arg>
-<arg>${searchProduct}</arg>
-<arg>Not Matched</arg>
-<arg>True</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20230731 20:17:35.701" level="INFO">Element 'xpath://*[@id="item4d8cbf0397"]/div/div[2]/a' contains text 'MacBook'.</msg>
-<status status="PASS" starttime="20230731 20:17:35.491" endtime="20230731 20:17:35.701"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230731 20:17:35.702" endtime="20230731 20:17:35.914"/>
-</kw>
-<status status="PASS" starttime="20230731 20:17:27.634" endtime="20230731 20:17:35.915"/>
+<status status="PASS" starttime="20230802 20:41:32.438" endtime="20230802 20:41:32.444"/>
 </test>
-<status status="PASS" starttime="20230731 20:17:20.611" endtime="20230731 20:17:35.917"/>
+<test id="s1-t3" name="Retrieve DELL XPS laptops from Laptop table" line="32">
+<kw name="Query" library="DatabaseLibrary">
+<var>${queryResults}</var>
+<arg>SELECT * FROM laptop where model_name like '%Latitude%';</arg>
+<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
+input `sansTran` to True to run command without an explicit transaction commit or rollback.
+Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
+<msg timestamp="20230802 20:41:32.444" level="INFO">Executing : Query  |  SELECT * FROM laptop where model_name like '%Latitude%'; </msg>
+<msg timestamp="20230802 20:41:32.446" level="INFO">${queryResults} = (('LAP01', 'DELL', 'Dell Latitude 7430', '704.99'),)</msg>
+<status status="PASS" starttime="20230802 20:41:32.444" endtime="20230802 20:41:32.447"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${queryResults}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230802 20:41:32.447" endtime="20230802 20:41:32.447"/>
+</kw>
+<status status="PASS" starttime="20230802 20:41:32.444" endtime="20230802 20:41:32.447"/>
+</test>
+<kw name="Disconnect From Database" library="DatabaseLibrary" type="TEARDOWN">
+<doc>Disconnects from the database.
+By default it's not an error if there was no open database connection -
+suitable for usage as a teardown.
+However you can enforce it using the `error_if_no_connection` parameter.</doc>
+<msg timestamp="20230802 20:41:32.447" level="INFO">Executing : Disconnect From Database</msg>
+<status status="PASS" starttime="20230802 20:41:32.447" endtime="20230802 20:41:32.447"/>
+</kw>
+<status status="PASS" starttime="20230802 20:41:32.393" endtime="20230802 20:41:32.447"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="searchProductTest">searchProductTest</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="DBTest">DBTest</stat>
 </suite>
 </statistics>
 <errors>
