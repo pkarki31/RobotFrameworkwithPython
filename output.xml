@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.4 on darwin)" generated="20230802 20:41:32.392" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.11.4 on darwin)" generated="20230805 21:31:31.017" rpa="false" schemaversion="4">
 <suite id="s1" name="DBTest" source="/Users/ayushisingh/Documents/RobotFrameworkwithPython/TestCases/DBTest.robot">
 <kw name="Connect To Database" library="DatabaseLibrary" type="SETUP">
 <arg>pymysql</arg>
@@ -10,95 +10,154 @@
 <arg>${DBPort}</arg>
 <doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
 connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
-<msg timestamp="20230802 20:41:32.410" level="INFO">Connecting using : pymysql.connect(db=robotDB, user=root, passwd=***, host=localhost, port=3306, charset=None) </msg>
-<status status="PASS" starttime="20230802 20:41:32.406" endtime="20230802 20:41:32.420"/>
+<msg timestamp="20230805 21:31:31.118" level="INFO">Connecting using : pymysql.connect(db=robotDB, user=root, passwd=***, host=localhost, port=3306, charset=None) </msg>
+<status status="PASS" starttime="20230805 21:31:31.102" endtime="20230805 21:31:31.140"/>
 </kw>
-<test id="s1-t1" name="Execute SQL Script - Insert Data laptop table" line="22">
-<kw name="Execute Sql Script" library="DatabaseLibrary">
-<var>${output}</var>
-<arg>SQL/${DBName}_insertData.sql</arg>
-<doc>Executes the content of the `sqlScriptFileName` as SQL commands. Useful for setting the database to a known
-state before running your tests, or clearing out your test data after running each a test. Set optional input
-`sansTran` to True to run command without an explicit transaction commit or rollback.</doc>
-<msg timestamp="20230802 20:41:32.421" level="INFO">Executing : Execute SQL Script  |  SQL/robotDB_insertData.sql </msg>
-<msg timestamp="20230802 20:41:32.421" level="INFO">Executing statement from script file: insert into  laptop value ("LAP01","DELL","Dell Latitude 7430","704.99")</msg>
-<msg timestamp="20230802 20:41:32.425" level="INFO">Executing statement from script file: insert into  laptop value ("LAP02","DELL","Dell Precision 7520","339.99")</msg>
-<msg timestamp="20230802 20:41:32.426" level="INFO">Executing statement from script file: insert into  laptop value ("LAP03","DELL","Dell G15","949.99")</msg>
-<msg timestamp="20230802 20:41:32.428" level="INFO">Executing statement from script file: insert into  laptop value ("LAP04","DELL","Dell Precision 7760","1,099.99")</msg>
-<msg timestamp="20230802 20:41:32.438" level="INFO">${output} = None</msg>
-<status status="PASS" starttime="20230802 20:41:32.421" endtime="20230802 20:41:32.438"/>
+<test id="s1-t1" name="Validating Product Search by Category (In Chrome browser)" line="43">
+<kw name="Register Keyword To Run On Failure" library="SeleniumLibrary">
+<arg>NONE</arg>
+<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
+<msg timestamp="20230805 21:31:31.141" level="INFO">No keyword will be run on failure.</msg>
+<status status="PASS" starttime="20230805 21:31:31.140" endtime="20230805 21:31:31.141"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>${output}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230802 20:41:32.438" level="INFO">None</msg>
-<status status="PASS" starttime="20230802 20:41:32.438" endtime="20230802 20:41:32.438"/>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER-Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230805 21:31:31.141" level="INFO">Opening browser 'Chrome' to base url 'https://www.ebay.com/'.</msg>
+<msg timestamp="20230805 21:31:31.142" level="INFO">Executing: /Users/ayushisingh/Documents/RobotFrameworkwithPython/venv/lib/python3.11/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json</msg>
+<status status="PASS" starttime="20230805 21:31:31.141" endtime="20230805 21:31:36.044"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230805 21:31:38.048" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230805 21:31:36.045" endtime="20230805 21:31:38.049"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="gdpr-banner-accept"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230805 21:31:38.052" level="INFO">Clicking element 'xpath://*[@id="gdpr-banner-accept"]'.</msg>
+<status status="PASS" starttime="20230805 21:31:38.050" endtime="20230805 21:31:38.110"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:gh-shop-a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230805 21:31:38.110" level="INFO">Clicking element 'id:gh-shop-a'.</msg>
+<status status="PASS" starttime="20230805 21:31:38.110" endtime="20230805 21:31:38.138"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="gh-sbc"]/tbody/tr/td[2]/ul[1]/li[1]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230805 21:31:38.138" level="INFO">Clicking element 'xpath://*[@id="gh-sbc"]/tbody/tr/td[2]/ul[1]/li[1]/a'.</msg>
+<status status="PASS" starttime="20230805 21:31:38.138" endtime="20230805 21:31:40.404"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://div[contains(text(),'PC laptops')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230805 21:31:40.405" level="INFO">Clicking element 'xpath://div[contains(text(),'PC laptops')]'.</msg>
+<status status="PASS" starttime="20230805 21:31:40.405" endtime="20230805 21:31:42.730"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://p[contains(text(),'Dell') and @class='b-guidancecard__title']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230805 21:31:42.732" level="INFO">Clicking element 'xpath://p[contains(text(),'Dell') and @class='b-guidancecard__title']'.</msg>
+<status status="PASS" starttime="20230805 21:31:42.731" endtime="20230805 21:31:45.008"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://div[contains(text(),'${searchModel}') and @class='b-info__title ']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230805 21:31:45.009" level="INFO">Clicking element 'xpath://div[contains(text(),'Dell Precision 7760') and @class='b-info__title ']'.</msg>
+<status status="PASS" starttime="20230805 21:31:45.008" endtime="20230805 21:31:46.289"/>
+</kw>
+<kw name="Query" library="DatabaseLibrary">
+<var>${priceFromDb}</var>
+<arg>SELECT price FROM laptop where model_name like '%${searchModel}%';</arg>
+<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
+input `sansTran` to True to run command without an explicit transaction commit or rollback.
+Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
+<msg timestamp="20230805 21:31:46.290" level="INFO">Executing : Query  |  SELECT price FROM laptop where model_name like '%Dell Precision 7760%'; </msg>
+<msg timestamp="20230805 21:31:46.303" level="INFO">${priceFromDb} = (('1,099.99',),)</msg>
+<status status="PASS" starttime="20230805 21:31:46.290" endtime="20230805 21:31:46.303"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${priceFromDb}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230805 21:31:46.303" endtime="20230805 21:31:46.304"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${DB value}</var>
+<arg>${priceFromDb[0][0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230805 21:31:46.305" level="INFO">${DB value} = 1,099.99</msg>
+<status status="PASS" starttime="20230805 21:31:46.304" endtime="20230805 21:31:46.305"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${DB value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230805 21:31:46.305" endtime="20230805 21:31:46.305"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${priceFromUI}</var>
+<arg>class:display-price</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230805 21:31:46.340" level="INFO">${priceFromUI} = $1,099.99</msg>
+<status status="PASS" starttime="20230805 21:31:46.305" endtime="20230805 21:31:46.340"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${priceFromUI}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230805 21:31:46.340" endtime="20230805 21:31:46.340"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${priceWithoutDollarSign}</var>
+<arg>${priceFromUI}</arg>
+<arg>$</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20230805 21:31:46.340" level="INFO">${priceWithoutDollarSign} = ['', '1,099.99']</msg>
+<status status="PASS" starttime="20230805 21:31:46.340" endtime="20230805 21:31:46.340"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${priceWithoutDollarSign[1]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230805 21:31:46.340" endtime="20230805 21:31:46.341"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230805 21:31:48.343" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230805 21:31:46.341" endtime="20230805 21:31:48.343"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${output}</arg>
-<arg>None</arg>
+<arg>${priceWithoutDollarSign[1]}</arg>
+<arg>${DB value}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20230802 20:41:32.438" level="INFO">Argument types are:
-&lt;class 'NoneType'&gt;
-&lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20230802 20:41:32.438" endtime="20230802 20:41:32.438"/>
+<status status="PASS" starttime="20230805 21:31:48.343" endtime="20230805 21:31:48.344"/>
 </kw>
-<status status="PASS" starttime="20230802 20:41:32.420" endtime="20230802 20:41:32.438"/>
-</test>
-<test id="s1-t2" name="Retrieve DELL laptops from Laptop table" line="28">
-<kw name="Query" library="DatabaseLibrary">
-<var>${queryResults}</var>
-<arg>SELECT * FROM laptop where company="DELL";</arg>
-<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
-input `sansTran` to True to run command without an explicit transaction commit or rollback.
-Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
-<msg timestamp="20230802 20:41:32.438" level="INFO">Executing : Query  |  SELECT * FROM laptop where company="DELL"; </msg>
-<msg timestamp="20230802 20:41:32.443" level="INFO">${queryResults} = (('LAP01', 'DELL', 'Dell Latitude 7430', '704.99'), ('LAP02', 'DELL', 'Dell Precision 7520', '339.99'), ('LAP03', 'DELL', 'Dell G15', '949.99'), ('LAP04', 'DELL', 'Dell Precision 7760', '1,099.99'))</msg>
-<status status="PASS" starttime="20230802 20:41:32.438" endtime="20230802 20:41:32.443"/>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230805 21:31:48.344" endtime="20230805 21:31:49.627"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${queryResults}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230802 20:41:32.444" endtime="20230802 20:41:32.444"/>
-</kw>
-<status status="PASS" starttime="20230802 20:41:32.438" endtime="20230802 20:41:32.444"/>
-</test>
-<test id="s1-t3" name="Retrieve DELL XPS laptops from Laptop table" line="32">
-<kw name="Query" library="DatabaseLibrary">
-<var>${queryResults}</var>
-<arg>SELECT * FROM laptop where model_name like '%Latitude%';</arg>
-<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
-input `sansTran` to True to run command without an explicit transaction commit or rollback.
-Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
-<msg timestamp="20230802 20:41:32.444" level="INFO">Executing : Query  |  SELECT * FROM laptop where model_name like '%Latitude%'; </msg>
-<msg timestamp="20230802 20:41:32.446" level="INFO">${queryResults} = (('LAP01', 'DELL', 'Dell Latitude 7430', '704.99'),)</msg>
-<status status="PASS" starttime="20230802 20:41:32.444" endtime="20230802 20:41:32.447"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${queryResults}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230802 20:41:32.447" endtime="20230802 20:41:32.447"/>
-</kw>
-<status status="PASS" starttime="20230802 20:41:32.444" endtime="20230802 20:41:32.447"/>
+<status status="PASS" starttime="20230805 21:31:31.140" endtime="20230805 21:31:49.627"/>
 </test>
 <kw name="Disconnect From Database" library="DatabaseLibrary" type="TEARDOWN">
 <doc>Disconnects from the database.
 By default it's not an error if there was no open database connection -
 suitable for usage as a teardown.
 However you can enforce it using the `error_if_no_connection` parameter.</doc>
-<msg timestamp="20230802 20:41:32.447" level="INFO">Executing : Disconnect From Database</msg>
-<status status="PASS" starttime="20230802 20:41:32.447" endtime="20230802 20:41:32.447"/>
+<msg timestamp="20230805 21:31:49.628" level="INFO">Executing : Disconnect From Database</msg>
+<status status="PASS" starttime="20230805 21:31:49.628" endtime="20230805 21:31:49.628"/>
 </kw>
-<status status="PASS" starttime="20230802 20:41:32.393" endtime="20230802 20:41:32.447"/>
+<status status="PASS" starttime="20230805 21:31:31.018" endtime="20230805 21:31:49.628"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="DBTest">DBTest</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="DBTest">DBTest</stat>
 </suite>
 </statistics>
 <errors>
